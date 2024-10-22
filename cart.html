@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Shoping</title>
+    <link rel="stylesheet"  href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo"></div>
+            <div>
+                <ul class="nav-ul">
+                    <li><a  href="index.html">Home</a></li>
+                    <li><a  href="shop.html">Shop</a></li>
+                    <li><a  href="blog.html">Blog</a></li>
+                    <li><a  href="about.html">About</a></li>
+                    <li><a  href="cont.html">Contact</a></li> 
+                    <li id="lg-bag"><a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>                    
+                    <a href="#"><i id="close" class="fa-solid fa-xmark"></i></a>                    
+                </ul>    
+            </div>
+            <div id="mobile">
+                <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a><i id="bar" class="fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="page-header" class="about-header">
+        <h2>#let's_talk</h2>
+        <p>LEAVE A MESSAGE,We love to hear you!!!</p>
+       
+    </main>
+
+    <section id="cart" class="section-p1">
+        <div class="cart-box">
+            <table id="cart-table" width="100%">
+                <thead>
+                    <tr>
+                        <td>Remove</td>
+                        <td>Images</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotoal</td>
+                    </tr>
+                </thead>
+                <tbody class="cart-item">
+                    <tr class="table-row">
+                        <td><a class="cart-remove" href="#"><i class="fa-regular fa-circle-xmark"></i></a></td>
+                        <td><img class="product-image" src="img/products/f1.jpg" alt="product image"></td>
+                        <td id="ProductNamee">Casual Shirts</td>
+                        <td class="ProductPrices">$78</td>
+                        <td class="cart-quantity"><input type="number" value="1"></td>
+                        <td>$78</td>`
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section> 
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div class="cpn-btn">
+                <input type="text" placeholder="Enter Your Coupon">
+                <button class="btn">Apply</button>
+            </div>            
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>$234</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>$234</strong></td>
+                </tr>
+            </table>
+            <button class="normal">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+       <div class="col">
+            <img class="logo-foot" src="img/logo.png" alt="logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>100 Rajwada Palace Indore, Madhya Pradesh</p>
+            <p><strong>Phone:</strong> 0731 452015 +91 9921222430</p>
+            <p><strong>Hours:</strong> 10:00 AM - 9:00 PM, Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <a><i class="fa-brands fa-facebook"></i></a>
+                    <a><i class="fa-brands fa-instagram"></i></a>
+                    <a><i class="fa-brands fa-twitter"></i></a>
+                    <a><i class="fa-brands fa-youtube"></i></a>
+                    <a><i class="fa-brands fa-pinterest"></i></a>    
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Police</a>
+            <a href="#">Term and Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div> 
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play Store</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="app store image">
+                <img src="img/pay/play.jpg" alt="play store image"/>
+            </div>
+            <p>Secure Payment Gateways</p>
+            <img src="img/pay/pay.png"> 
+        </div>
+        <div class="copyright">
+            <p>2024 , HTML CSS Ecommerce Template</p>
+        </div>
+    </footer>
+    
+    <script>
+        function redirectToProduct(imageUrl, productName, productBrand){
+            const url = `sproduct.html?image=${encodeURIComponent(imageUrl)}&name=${encodeURIComponent(productName)}&brand=${encodeURIComponent(productBrand)}`;
+            window.location.href = url;
+        }
+    </script>
+
+    <script src="app1.js"></script>
+
+</body>
+</html>    
